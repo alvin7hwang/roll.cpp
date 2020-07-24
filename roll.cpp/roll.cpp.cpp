@@ -344,23 +344,92 @@ printf("\n\n");
 return 0;
 }*/
 
-    int step = 0;
-    int num = 1;
+/*int step = 0;
+int num = 1;
 
-    while (true)
+while (true)
+{
+    printf("출력할 단을 입력하세요\n");
+    scanf("%d", &step);
+    if (step < 0 || step >9)
     {
-        printf("출력할 단을 입력하세요\n");
-        scanf("%d", &step);
-        if (step < 0 || step >9)
+        break;
+    }
+    while (num <= 9)
+    {
+        printf("%d * %d = %d\n", step, num, step * num);
+        num++;
+    }
+    num = 1;
+    putchar('\n');
+}
+return 0;
+}*/
+
+/*int students[5] = { 5 };
+
+for (int i = 0; i < 5; i++)
+{
+    printf("%d번 학생 출석 확인(O,X)\n", i + 1);
+    scanf("%c", &students[i]);
+
+    while (getchar() != '\n');//입력 버퍼 삭제
+
+}
+putchar('\n');
+for (int i = 0; i < 5; i++)
+{
+    printf("%d번 학생 출석 : %c\n", i + 1, students[i]);
+}
+return 0;
+}*/
+
+/*int num[5][7] = { 0, };
+int count = 1;
+
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 7; j++)
+    {
+        num[i][j] = i + 1 + j * 7;
+    }
+}
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 7; j++)
+    {
+        printf("%4d", num[i][j]);
+    }
+    putchar('\n');
+}
+return 0;
+}*/
+
+    int num[5][7] = { 0, };
+    int count = 1;
+    for (int i = 0; i < 5; i++)
+    {
+        if (i % 2 == 0)
         {
-            break;
+            for (int j = 0; j < 7; j++)
+            {
+                num[i][j] = count++;
+            }
         }
-        while (num <= 9)
+        else
         {
-            printf("%d * %d = %d\n", step, num, step * num);
-            num++;
+            for (int j = 7 - 1; j >= 0; j--)
+            {
+                num[i][j] = count++;
+            }
         }
-        num = 1;
+    }
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < 7; j++)
+        {
+            printf("%2d", num[i][j]);
+        }
         putchar('\n');
     }
     return 0;
