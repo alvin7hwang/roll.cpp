@@ -93,7 +93,6 @@ return 0;
 
 }*/
 
-
 /*int num1;
 int num2;
 int num3;
@@ -210,7 +209,6 @@ else
 
 return 0;
 }*/
-
 
 /*char name[11] = { 0, };
 int gender = 0;
@@ -349,11 +347,14 @@ return 0;
     int step = 0;
     int num = 1;
 
-    printf("출력할 단을 입력하세요\n");
-    scanf("%d", &step);
-
-    while (step > 0 && step <= 9)
+    while (true)
     {
+        printf("출력할 단을 입력하세요\n");
+        scanf("%d", &step);
+        if (step < 0 || step >9)
+        {
+            break;
+        }
         while (num <= 9)
         {
             printf("%d * %d = %d\n", step, num, step * num);
@@ -361,8 +362,6 @@ return 0;
         }
         num = 1;
         putchar('\n');
-        printf("출력할 단을 입력하세요\n");
-        scanf("%d", &step);
     }
     return 0;
 }
