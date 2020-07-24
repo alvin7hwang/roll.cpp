@@ -336,12 +336,33 @@ printf("1부터 %d까지의 정수의 합은 %d", num, sum);
 return 0;
 }*/
 
-    int i = 65;
-    while (i <= 122)
+/*int i = 65;
+while (i <= 122)
+{
+    printf("%5d - %c\t\t", i, i);
+    i++;
+}
+printf("\n\n");
+return 0;
+}*/
+
+    int step = 0;
+    int num = 1;
+
+    printf("출력할 단을 입력하세요\n");
+    scanf("%d", &step);
+
+    while (step > 0 && step <= 9)
     {
-        printf("%5d - %c\t\t", i, i);
-        i++;
+        while (num <= 9)
+        {
+            printf("%d * %d = %d\n", step, num, step * num);
+            num++;
+        }
+        num = 1;
+        putchar('\n');
+        printf("출력할 단을 입력하세요\n");
+        scanf("%d", &step);
     }
-    printf("\n\n");
     return 0;
 }
