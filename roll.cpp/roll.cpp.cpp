@@ -3,7 +3,19 @@
 
 #include <stdio.h>
 #include <string.h>
+#define MAP_WIDTH 10
+#define MAP_HEIGHT 10
+
+#define WALL 2
+#define GEM 1
+#define ROAD 0
 //2020 07 20
+int Sum(int a, int b);
+//void Add();
+int Input(int a, int b);
+int Output(int a, int b, int sum);
+
+
 int main()
 {
     /*char age = 20;
@@ -405,32 +417,93 @@ for (int i = 0; i < 5; i++)
 return 0;
 }*/
 
-    int num[5][7] = { 0, };
-    int count = 1;
-    for (int i = 0; i < 5; i++)
-    {
-        if (i % 2 == 0)
-        {
-            for (int j = 0; j < 7; j++)
-            {
-                num[i][j] = count++;
-            }
-        }
-        else
-        {
-            for (int j = 7 - 1; j >= 0; j--)
-            {
-                num[i][j] = count++;
-            }
-        }
-    }
-    for (int i = 0; i < 5; i++)
+/*int num[5][7] = { 0, };
+int count = 1;
+for (int i = 0; i < 5; i++)
+{
+    if (i % 2 == 0)
     {
         for (int j = 0; j < 7; j++)
         {
-            printf("%2d", num[i][j]);
+            num[i][j] = count++;
         }
-        putchar('\n');
     }
+    else
+    {
+        for (int j = 7 - 1; j >= 0; j--)
+        {
+            num[i][j] = count++;
+        }
+    }
+}
+for (int i = 0; i < 5; i++)
+{
+    for (int j = 0; j < 7; j++)
+    {
+        printf("%2d", num[i][j]);
+    }
+    putchar('\n');
+}
+return 0;
+}*/
+
+/*int map[MAP_HEIGHT][MAP_WIDTH] = { 0, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+                                   0, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+                                   2, 2, 2, 2, 2, 2, 2, 0, 0, 2,
+                                   2, 0, 0, 0, 0, 0, 2, 2, 0, 2,
+                                   2, 0, 0, 1, 0, 0, 2, 2, 0, 2,
+                                   2, 2, 2, 2, 2, 0, 2, 2, 0, 2,
+                                   2, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+                                   2, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+                                   2, 0, 0, 0, 0, 0, 0, 0, 0, 2,
+                                   2, 2, 2, 2, 2, 2, 2, 2, 2, 2 };
+
+
+for (int i = 0; i < MAP_HEIGHT; i++)
+{
+    for (int j = 0; j < MAP_WIDTH; j++)
+    {
+        if (map[i][j] == ROAD)
+        {
+            printf("=");
+        }
+        if (map[i][j] == GEM)
+        {
+            printf("*");
+        }
+        if (map[i][j] == WALL);
+        {
+            printf("ㅁ");
+        }
+    }
+    printf("\n");
+}
+return 0;
+}*/
+
+/*int a, b;
+
+printf("더할 두 수를 입력하세요\n");
+scanf("%d%d", &a, &b);
+printf("%d + %d = %d", a, b, Sum(a, b));
+return 0;
+}*/
+
+/*for (int i = 0; i < 5; i++)
+{
+    Add();
+}
+return 0;
+}
+void Add()
+{
+    static int add;
+    printf("현재 값 = %d\n", ++add);
+}*/
+
+    static int a, b, sum;
+    Input(a, b);
+    Sum(a, b);
+    Output(a, b, sum);
     return 0;
 }
