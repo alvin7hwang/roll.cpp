@@ -3,18 +3,20 @@
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define MAP_WIDTH 10
 #define MAP_HEIGHT 10
 
 #define WALL 2
 #define GEM 1
 #define ROAD 0
+int global = 300;
 //2020 07 20
-int Sum(int a, int b);
+//int Sum(int a, int b);
 //void Add();
-int Input(int a, int b);
-int Output(int a, int b, int sum);
-
+//void Input(int* a, int* b);
+//void Output(int a, int b, int result);
+void Swap(int* a, int* b);
 
 int main()
 {
@@ -501,9 +503,65 @@ void Add()
     printf("현재 값 = %d\n", ++add);
 }*/
 
-    static int a, b, sum;
-    Input(a, b);
-    Sum(a, b);
-    Output(a, b, sum);
+/*int a = 0;
+int b = 0;
+int result = 0;
+
+Input(&a, &b);
+result = Sum(a, b);
+Output(a, b, result);
+return 0;
+}
+void Input(int* a, int* b)
+{
+    printf("더할 두 수를 입력하세요\n");
+    scanf("%d%d", a, b);
+}
+int Sum(int a, int b)
+{
+    return a + b;
+}
+void Output(int a, int b, int result)
+{
+    printf("%d + %d = %d\n", a, b, result);
+}*/
+
+/*int static a = 30;
+int b = 30;
+int* p = (int*)malloc(sizeof(int));
+*p = 150;
+printf("전역변수 global=%3d, &global=%d\n", global, &global);
+printf("정적변수 a=%3d, &a=%d\n", a, &a);
+printf("지역변수 b=%3d, &a=%d\n", b, &b);
+printf("포인터 *p=%3d, p=%d\n", *p, p);
+printf("포인터 *p=%3d, &p=%d\n", *p, &p);
+free(p);
+return 0;
+}*/
+
+/*int nData = 10;
+int* pnData = &nData;
+
+printf("%d, %d\n", nData, *pnData);
+printf("%p, %p\n", &nData, pnData);
+*pnData += 20;
+printf("%d\n", nData);
+return 0;
+}*/
+
+    int a = 3;
+    int b = 2;
+
+    Swap(&a, &b);
+    printf("함수 종료 : a = %d, b = %d", a, b);
     return 0;
+}
+void Swap(int* a, int* b)
+{
+    int temp = 0;
+    printf("변경 전 : a = %d, b = %d\n", *a, *b);
+    *a = temp;
+    *a = *b;
+    *b = temp;
+    printf("변경 후 : a = %d, b = %d\n", *a, *b);
 }
