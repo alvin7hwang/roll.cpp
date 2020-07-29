@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <malloc.h>
 #define MAP_WIDTH 10
 #define MAP_HEIGHT 10
 
@@ -12,11 +13,13 @@
 #define ROAD 0
 int global = 300;
 //2020 07 20
-//int Sum(int a, int b);
+int Sum(int a, int b);
 //void Add();
-//void Input(int* a, int* b);
-//void Output(int a, int b, int result);
-void Swap(int* a, int* b);
+void Input(int* a, int* b);
+void Output(int a, int b, int result);
+int ArrayAdd(int *arr, int size);
+//void Swap(int* a, int* b);
+int ArrayMax(int pArr[]);
 
 int main()
 {
@@ -526,6 +529,8 @@ void Output(int a, int b, int result)
     printf("%d + %d = %d\n", a, b, result);
 }*/
 
+//inputoutput
+
 /*int static a = 30;
 int b = 30;
 int* p = (int*)malloc(sizeof(int));
@@ -549,7 +554,7 @@ printf("%d\n", nData);
 return 0;
 }*/
 
-    int a = 3;
+/* int a = 3;
     int b = 2;
 
     Swap(&a, &b);
@@ -564,4 +569,126 @@ void Swap(int* a, int* b)
     *a = *b;
     *b = temp;
     printf("변경 후 : a = %d, b = %d\n", *a, *b);
+}*/
+
+/*char str1[5] = "asdf";
+const char* str2 = "ABCD";
+printf("%s \n", str1);
+printf("%s \n", str2);
+str1[0] = 'x';
+printf("%s \n", str1);
+printf("%s \n", str2);
+return 0;
+}*/
+
+/*int arr[3] = { 10, 20, 30 };
+int* ptr = &arr[0];
+
+printf("%d %3d \n", ptr[0], arr[0]);
+printf("%d %3d \n", ptr[1], arr[1]);
+printf("%d %3d \n", ptr[2], arr[2]);
+printf("%d %3d \n", *ptr, *arr);
+printf("%d %3d \n", *(ptr + 0), *(arr + 0));
+printf("%d %3d \n", *(ptr + 1), *(arr + 1));
+printf("%d %3d \n", *(ptr + 2), *(arr + 2));
+return 0;
+}*/
+
+/*int arr[5];
+constint* pArr = arr;
+
+printf("%d,\n", sizeof(Arr);
+printf("%d \n', sizeof(pArr;
+
+    return 0;
+}*/
+
+/*int a = 10, b = 20, c = 30;
+int* pArr[3] = { &a, &b, &c };
+
+printf("%d %10d, %3d, \n", &a, pArr[0], *pArr[0]);
+printf("%d %10d, %3d, \n", &a, pArr[1], *pArr[1]);
+printf("%d %10d, %3d, \n", &a, pArr[2], *pArr[2]);
+
+return 0;
+}*/
+
+/*const char* pArr[3] = { " c언어","c ++ 언어","c# 언어" };
+
+printf("%s\n", pArr[0]);
+printf("%s\n", pArr[1]);
+printf("%s\n", pArr[2]);
+
+return 0;
+}*/
+
+/*const char* pArr[3];
+pArr[0] = "c언어";
+pArr[1] = "c++언어";
+pArr[2] = "c#언어";
+
+for (int i = 0; i < 3; i++)
+{
+    printf("%s \n", pArr[i]);
 }
+return 0;
+}*/
+
+/*int arr1[4] = { 1, 2, 3, 4 };
+int arr2[4] = { 5, 6, 7, 8 };
+int arr3[4] = { 9, 10, 11, 12 };
+int* pArr[3] = { arr1, arr2, arr3 };
+
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 4; j++)
+    {
+        printf("%4d", pArr[i][j]);
+    }
+    printf("\n");
+}
+return 0;
+}*/
+
+/*int arr[5] = { 3, 6, 9, 12, 15 };
+int size = (sizeof(arr) / sizeof(int));
+
+
+
+printf("배열의 총 합은 %d\n", ArrayAdd(arr, size));
+
+return 0;
+}
+int ArrayAdd(int* pArr, int size)
+{
+    int sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        sum += pArr[i];
+    }
+    return sum;
+}*/
+
+/*int ArrayMax(int pArr[])
+    {
+        int max = 0;
+        max = pArr[0];
+        for (int i = 1; i < size; i++)
+        {
+            if (max < pArr[i])
+            {
+                max = pArr[i];
+            }
+        }
+    }*/
+
+    /*int* pBuffer = (int*)malloc(sizeof(int) * 100);
+
+    printf("버퍼에 할당된 메모리 크기 : %2Byte\n", sizeof(pBuffer));
+
+    printf("버퍼에 할당된 메모리 크기 : %2Byte\n", _msize(pBuffer));
+
+    free(pBuffer);
+    return 0;
+}*/
+
