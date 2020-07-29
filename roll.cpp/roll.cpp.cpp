@@ -13,13 +13,13 @@
 #define ROAD 0
 int global = 300;
 //2020 07 20
-int Sum(int a, int b);
+//int Sum(int a, int b);
 //void Add();
-void Input(int* a, int* b);
-void Output(int a, int b, int result);
-int ArrayAdd(int *arr, int size);
+//void Input(int* a, int* b);
+//void Output(int a, int b, int result);
+//int ArrayAdd(int *arr, int size);
 //void Swap(int* a, int* b);
-int ArrayMax(int pArr[]);
+//int ArrayMax(int pArr[]);
 
 int main()
 {
