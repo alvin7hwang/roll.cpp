@@ -682,13 +682,74 @@ int ArrayAdd(int* pArr, int size)
         }
     }*/
 
-    /*int* pBuffer = (int*)malloc(sizeof(int) * 100);
+/*     int* pBuffer = (int*)malloc(sizeof(int) * 100);
 
-    printf("버퍼에 할당된 메모리 크기 : %2Byte\n", sizeof(pBuffer));
+           printf("버퍼에 할당된 메모리 크기 : %2Byte\n", sizeof(pBuffer));
 
-    printf("버퍼에 할당된 메모리 크기 : %2Byte\n", _msize(pBuffer));
+           printf("버퍼에 할당된 메모리 크기 : %2Byte\n", _msize(pBuffer));
 
-    free(pBuffer);
+           free(pBuffer);
+           return 0;
+       }*/
+
+/*     int* ptr = NULL;
+
+              ptr = (int*)malloc(sizeof(int) * 4);
+
+              for (int i = 0; i < 4; i++)
+              {
+                  ptr[i] = i + 1;
+              }
+
+              int *temp = (int*)malloc(sizeof(int) * 8);
+              memset(temp, 0, sizeof(int) * 8);
+
+              for (int i = 0; i < 4; i++)
+              {
+                  temp[i] = ptr[i];
+                  free(ptr);
+                  ptr = temp;
+                  for (int i = 0; i < 8; i++)
+                  {
+                      printf("ptr[%d] = %d\n", i, *(ptr + i));
+                  }
+              }
+              free(ptr);
+              return 0;
+          }*/
+
+/*struct PERSON
+              {
+                  char name[10];
+                  int age;
+                  float height;
+              };
+              struct PERSON person = { "황윤재", 20, 175.4 };
+              printf("이름 : %s\n", person.name);
+              printf("나이 : %d\n", person.age);
+              printf("키 : %f\n", person.height);
+              return 0;
+          }*/
+
+    struct Student
+    {
+        char name[11];
+        int korean;
+        int english;
+        int math;
+    };
+    struct Student student[5];
+    for (int i = 0; i < 5; i++)
+    {
+        printf("학생의 이름을 입력하세요\n");
+        scanf("%s", student[i].name);
+        printf("%s의 국어 성적을 입력하세요\n", student[i].name);
+        scanf("%d", &student[i].korean);
+        printf("%s의 영어 성적을 입력하세요\n", student[i].name);
+        scanf("%d", &student[i].english);
+        printf("%s의 수학 성적을 입력하세요\n", student[i].name);
+        scanf("%d", &student[i].math);
+        printf("%s의 국어 성적 : %d\n %s의 영어 성적 : %d\n %s의 수학 성적 : %d\n", student[i].name, student[i].korean, student[i].name, student[i].english, student[i].name, student[i].math);
+    }
     return 0;
-}*/
-
+}
